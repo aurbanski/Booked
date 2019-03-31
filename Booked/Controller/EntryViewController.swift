@@ -15,6 +15,10 @@ class EntryViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func loginButtonPressed(_ sender: Any) {
+    }
+    @IBAction func signupButtonPressed(_ sender: Any) {
+    }
+    
 }
 

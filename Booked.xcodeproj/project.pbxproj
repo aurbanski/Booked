@@ -82,10 +82,6 @@
 		BA101C2022515329000D94CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BA101C0E225151F1000D94CB /* AppDelegate.swift */,
-				BA101C10225151F1000D94CB /* EntryViewController.swift */,
-				BA101C31225164CA000D94CB /* LoginViewController.swift */,
-				BA101C33225164D9000D94CB /* SignupViewController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +98,10 @@
 		BA101C2222515344000D94CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BA101C0E225151F1000D94CB /* AppDelegate.swift */,
+				BA101C10225151F1000D94CB /* EntryViewController.swift */,
+				BA101C31225164CA000D94CB /* LoginViewController.swift */,
+				BA101C33225164D9000D94CB /* SignupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
