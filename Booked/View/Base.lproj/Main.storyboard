@@ -24,7 +24,7 @@
         <!--Entry View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Entry View Controller" customClass="ViewController" customModule="Booked" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Entry View Controller" customClass="EntryViewController" customModule="Booked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,8 +84,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mj6-cY-bOi"/>
-                                                    <segue destination="Fwz-oM-5uA" kind="show" identifier="goToLogin" id="6d5-JI-XlM"/>
+                                                    <segue destination="Fwz-oM-5uA" kind="show" id="LQR-CB-6mU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0R-nm-4sR">
@@ -102,8 +101,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="signupButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BLB-sW-aSq"/>
-                                                    <segue destination="BJ1-9P-d5N" kind="show" identifier="goToSignup" id="leD-4H-jpG"/>
+                                                    <segue destination="BJ1-9P-d5N" kind="show" id="Y5P-oy-Xzr"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -157,7 +155,7 @@
         <!--Login View Controller-->
         <scene sceneID="2Ry-ca-8eG">
             <objects>
-                <viewController id="Fwz-oM-5uA" userLabel="Login View Controller" sceneMemberID="viewController">
+                <viewController id="Fwz-oM-5uA" userLabel="Login View Controller" customClass="LoginViewController" customModule="Booked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Qz-s9-xFQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,6 +230,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginButtonPressed:" destination="Fwz-oM-5uA" eventType="touchUpInside" id="msX-vb-S3K"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -255,13 +256,13 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="215.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoS-lb-4fe">
-                                        <rect key="frame" x="50" y="70" width="146" height="76"/>
+                                        <rect key="frame" x="50" y="70" width="145.5" height="76"/>
                                         <fontDescription key="fontDescription" name="AbrilFatface-Regular" family="Abril Fatface" pointSize="56"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKO-BQ-IdO">
-                                        <rect key="frame" x="50" y="146" width="183" height="37"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKO-BQ-IdO">
+                                        <rect key="frame" x="50" y="146" width="197.5" height="36.5"/>
                                         <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -296,6 +297,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zul-si-2hb"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="AoX-Nx-izW" id="2cg-6h-JMW"/>
+                        <outlet property="passwordTextField" destination="J9b-JI-W79" id="alO-pW-GLo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omx-Kr-yaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,7 +309,7 @@
         <!--Signup View Controller-->
         <scene sceneID="B6N-9b-lo9">
             <objects>
-                <viewController id="BJ1-9P-d5N" userLabel="Signup View Controller" sceneMemberID="viewController">
+                <viewController id="BJ1-9P-d5N" userLabel="Signup View Controller" customClass="SignupViewController" customModule="Booked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="syi-1t-D79">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -379,6 +384,9 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signupButtonPressed:" destination="BJ1-9P-d5N" eventType="touchUpInside" id="CkW-E9-oLf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -408,8 +416,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A12-mw-nmd">
-                                        <rect key="frame" x="50" y="146" width="207.5" height="37"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fill out to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A12-mw-nmd">
+                                        <rect key="frame" x="50" y="141" width="196" height="26"/>
                                         <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -446,6 +454,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X1j-VC-dR0"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="4G5-vL-Wpf" id="4WV-Bm-pbe"/>
+                        <outlet property="passwordTextField" destination="vTm-Ix-Hkk" id="bGs-gs-cyE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avR-ge-CNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
