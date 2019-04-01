@@ -150,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="658.92053973013503"/>
+            <point key="canvasLocation" x="38" y="767"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="2Ry-ca-8eG">
@@ -300,11 +300,119 @@
                     <connections>
                         <outlet property="emailTextField" destination="AoX-Nx-izW" id="2cg-6h-JMW"/>
                         <outlet property="passwordTextField" destination="J9b-JI-W79" id="alO-pW-GLo"/>
+                        <segue destination="dsa-gX-8dx" kind="show" identifier="goToTabs" id="fI4-hE-4Ti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omx-Kr-yaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="1229.2353823088456"/>
+            <point key="canvasLocation" x="1148" y="1152"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="xfj-09-Qhs">
+            <objects>
+                <viewController id="5dC-K4-sfQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OCG-P7-BVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ts-Ky-3T0">
+                                <rect key="frame" x="50" y="50" width="275" height="458"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNv-vK-X9M">
+                                <rect key="frame" x="0.0" y="558" width="375" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Gwa-Du-nu3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LvX-J1-WPi" firstAttribute="trailing" secondItem="mNv-vK-X9M" secondAttribute="trailing" id="9Yy-qZ-WNG"/>
+                            <constraint firstItem="LvX-J1-WPi" firstAttribute="trailing" secondItem="4ts-Ky-3T0" secondAttribute="trailing" constant="50" id="HsS-Ew-2Ts"/>
+                            <constraint firstItem="mNv-vK-X9M" firstAttribute="bottom" secondItem="LvX-J1-WPi" secondAttribute="bottom" id="MD1-VX-1ev"/>
+                            <constraint firstItem="mNv-vK-X9M" firstAttribute="leading" secondItem="LvX-J1-WPi" secondAttribute="leading" id="aAJ-6N-t93"/>
+                            <constraint firstItem="4ts-Ky-3T0" firstAttribute="top" secondItem="LvX-J1-WPi" secondAttribute="top" constant="30" id="fF5-7u-h6d"/>
+                            <constraint firstItem="4ts-Ky-3T0" firstAttribute="leading" secondItem="LvX-J1-WPi" secondAttribute="leading" constant="50" id="rYc-TE-KDm"/>
+                            <constraint firstItem="mNv-vK-X9M" firstAttribute="top" secondItem="4ts-Ky-3T0" secondAttribute="bottom" constant="50" id="xSH-aJ-5kq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LvX-J1-WPi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="LfK-rS-xjp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAm-lI-0Ht" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3644" y="1262"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="Mhc-oa-9XB">
+            <objects>
+                <viewController id="w0D-WB-r9I" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VHT-mt-fjH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-z2-hbS">
+                                <rect key="frame" x="50" y="70" width="275" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Textbooks For" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om8-QS-QRK">
+                                        <rect key="frame" x="0.0" y="0.0" width="264" height="54"/>
+                                        <fontDescription key="fontDescription" name="AbrilFatface-Regular" family="Abril Fatface" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnV-Pa-grK">
+                                        <rect key="frame" x="0.0" y="46" width="80" height="54"/>
+                                        <fontDescription key="fontDescription" name="AbrilFatface-Regular" family="Abril Fatface" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Om8-QS-QRK" firstAttribute="top" secondItem="DFe-z2-hbS" secondAttribute="top" id="FP4-lV-a5r"/>
+                                    <constraint firstItem="MnV-Pa-grK" firstAttribute="leading" secondItem="DFe-z2-hbS" secondAttribute="leading" id="Lc4-Jo-aG1"/>
+                                    <constraint firstItem="Om8-QS-QRK" firstAttribute="leading" secondItem="DFe-z2-hbS" secondAttribute="leading" id="QWh-m6-At1"/>
+                                    <constraint firstAttribute="bottom" secondItem="MnV-Pa-grK" secondAttribute="bottom" id="f3I-Jw-izv"/>
+                                    <constraint firstAttribute="height" constant="100" id="gHf-j2-ygk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DFe-z2-hbS" firstAttribute="top" secondItem="ePI-9b-Ogb" secondAttribute="top" constant="50" id="3GF-RN-vB9"/>
+                            <constraint firstItem="ePI-9b-Ogb" firstAttribute="trailing" secondItem="DFe-z2-hbS" secondAttribute="trailing" constant="50" id="bhU-hX-KhL"/>
+                            <constraint firstItem="DFe-z2-hbS" firstAttribute="leading" secondItem="ePI-9b-Ogb" secondAttribute="leading" constant="50" id="mC8-ZZ-g5R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ePI-9b-Ogb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="OCa-XC-Guc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAD-tc-8bJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3644" y="550.97451274362822"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="OSp-6f-Aae">
+            <objects>
+                <tabBarController id="dsa-gX-8dx" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HmG-qg-0n5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="w0D-WB-r9I" kind="relationship" relationship="viewControllers" id="ZxI-Gb-GAK"/>
+                        <segue destination="5dC-K4-sfQ" kind="relationship" relationship="viewControllers" id="5om-4y-V3X"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7O-hc-sm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="738"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="B6N-9b-lo9">
@@ -457,14 +565,18 @@
                     <connections>
                         <outlet property="emailTextField" destination="4G5-vL-Wpf" id="4WV-Bm-pbe"/>
                         <outlet property="passwordTextField" destination="vTm-Ix-Hkk" id="bGs-gs-cyE"/>
+                        <segue destination="dsa-gX-8dx" kind="show" identifier="goToTabs" id="K0F-zR-Q64"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avR-ge-CNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="303.59820089955025"/>
+            <point key="canvasLocation" x="1148" y="457"/>
         </scene>
     </scenes>
     <resources>
         <image name="booksTransparent" width="1249.5" height="1248"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="K0F-zR-Q64"/>
+    </inferredMetricsTieBreakers>
 </document>

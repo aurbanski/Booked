@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
                 print(error!)
             } else {
                 print("Success")
+                self.performSegue(withIdentifier: "goToTabs", sender: self)
             }
         }
     }

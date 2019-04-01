@@ -24,6 +24,7 @@ class SignupViewController: UIViewController {
                 print(error!)
             } else {
                 print("Success!")
+                self.performSegue(withIdentifier: "goToTabs", sender: self)
             }
         }
     }
