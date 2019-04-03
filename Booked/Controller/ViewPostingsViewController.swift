@@ -9,26 +9,26 @@
 import UIKit
 import Firebase
 
-class ViewPostingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewPostingsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var postingsArray: [Posting] = [Posting]()
     
-    @IBOutlet weak var postingsTableView: UITableView!
+    @IBOutlet weak var postingsCollectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        postingsTableView.delegate = self
-        postingsTableView.dataSource = self
+        postingsCollectionView.delegate = self
+        postingsCollectionView.dataSource = self
         
-        postingsTableView.register(UINib(nibName: "TextbookTableViewCell", bundle: nil), forCellReuseIdentifier: "TextbookTableViewCell")
-        postingsTableView.separatorStyle = .none
+        postingsCollectionView.register(UINib.init(nibName: "TextbookTableViewCell", bundle: nil), forCellWithReuseIdentifier: "TextbookTableViewCell")
         
         getPostings()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TextbookTableViewCell", for: indexPath) as! TextbookTableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TextbookTableViewCell", for: indexPath) as! TextbookTableViewCell
         cell.posting = postingsArray[indexPath.row]
         cell.priceTextField.text = postingsArray[indexPath.row].price
         let imageReference = Storage.storage().reference(forURL: postingsArray[indexPath.row].imageURL)
@@ -44,7 +44,7 @@ class ViewPostingsViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return postingsArray.count
     }
     
@@ -68,7 +68,7 @@ class ViewPostingsViewController: UIViewController, UITableViewDelegate, UITable
             let posting = self.populatePosting(posting: Posting(), snapshot: snapshotValue)
             
             self.postingsArray.append(posting)
-            self.postingsTableView.reloadData()
+            self.postingsCollectionView.reloadData()
         }
     }
 }

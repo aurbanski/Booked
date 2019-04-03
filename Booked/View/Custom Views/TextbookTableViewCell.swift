@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextbookTableViewCell: UITableViewCell {
+class TextbookTableViewCell: UICollectionViewCell {
     var posting: Posting?
     
     @IBOutlet weak var bookImageView: UIImageView!
@@ -18,6 +18,7 @@ class TextbookTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
     @IBAction func addToCartPressed(_ sender: Any) {
 //        if let postingForHandler = posting {
 //            
