@@ -9,6 +9,8 @@
 import UIKit
 
 class TextbookTableViewCell: UITableViewCell {
+    var posting: Posting?
+    
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var priceTextField: UILabel!
     
@@ -17,6 +19,9 @@ class TextbookTableViewCell: UITableViewCell {
         // Initialization code
     }
     @IBAction func addToCartPressed(_ sender: Any) {
+//        if let postingForHandler = posting {
+//            
+//        }
     }
     
 }

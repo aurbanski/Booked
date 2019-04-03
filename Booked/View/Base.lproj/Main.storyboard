@@ -425,16 +425,16 @@
             </objects>
             <point key="canvasLocation" x="3644" y="1146"/>
         </scene>
-        <!--Item 1-->
+        <!--View Postings-->
         <scene sceneID="Mhc-oa-9XB">
             <objects>
-                <viewController id="w0D-WB-r9I" sceneMemberID="viewController">
+                <viewController id="w0D-WB-r9I" userLabel="View Postings" customClass="ViewPostingsViewController" customModule="Booked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VHT-mt-fjH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-z2-hbS">
-                                <rect key="frame" x="50" y="70" width="275" height="100"/>
+                                <rect key="frame" x="50" y="50" width="275" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Textbooks For" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Om8-QS-QRK">
                                         <rect key="frame" x="0.0" y="0.0" width="264" height="54"/>
@@ -458,20 +458,31 @@
                                     <constraint firstAttribute="height" constant="100" id="gHf-j2-ygk"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eTZ-tK-YNB">
+                                <rect key="frame" x="0.0" y="158" width="375" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DFe-z2-hbS" firstAttribute="top" secondItem="ePI-9b-Ogb" secondAttribute="top" constant="50" id="3GF-RN-vB9"/>
+                            <constraint firstItem="DFe-z2-hbS" firstAttribute="top" secondItem="ePI-9b-Ogb" secondAttribute="top" constant="30" id="3GF-RN-vB9"/>
+                            <constraint firstItem="eTZ-tK-YNB" firstAttribute="trailing" secondItem="ePI-9b-Ogb" secondAttribute="trailing" id="B1J-KP-2jr"/>
+                            <constraint firstItem="eTZ-tK-YNB" firstAttribute="bottom" secondItem="ePI-9b-Ogb" secondAttribute="bottom" id="HWx-vI-l8o"/>
+                            <constraint firstItem="eTZ-tK-YNB" firstAttribute="top" secondItem="DFe-z2-hbS" secondAttribute="bottom" constant="8" id="Ypu-cC-Qv4"/>
+                            <constraint firstItem="eTZ-tK-YNB" firstAttribute="leading" secondItem="ePI-9b-Ogb" secondAttribute="leading" id="YtV-PF-Gd5"/>
                             <constraint firstItem="ePI-9b-Ogb" firstAttribute="trailing" secondItem="DFe-z2-hbS" secondAttribute="trailing" constant="50" id="bhU-hX-KhL"/>
                             <constraint firstItem="DFe-z2-hbS" firstAttribute="leading" secondItem="ePI-9b-Ogb" secondAttribute="leading" constant="50" id="mC8-ZZ-g5R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ePI-9b-Ogb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="OCa-XC-Guc"/>
+                    <connections>
+                        <outlet property="postingsTableView" destination="eTZ-tK-YNB" id="mOF-hQ-Kh6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAD-tc-8bJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3644" y="-249"/>
+            <point key="canvasLocation" x="3644" y="-249.62518740629687"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OSp-6f-Aae">
