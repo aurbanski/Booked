@@ -38,14 +38,15 @@ class AddTextbookViewController: UIViewController, UIImagePickerControllerDelega
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            uploadImage = image.pngData()
+            let scaledImage = image.resizeWithPercent(percentage: 0.25)
+            uploadImage = scaledImage?.jpegData(compressionQuality: 0.5)
         }
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func submitButtonPressed(_ sender: Any) {
         toggleEnabledViews(false)
-        let uuid = NSUUID().uuidString + ".png"
+        let uuid = NSUUID().uuidString + ".jpeg"
         let storage = Storage.storage().reference().child(uuid)
         var downloadURL: String?
         
@@ -81,5 +82,19 @@ class AddTextbookViewController: UIViewController, UIImagePickerControllerDelega
                 }
             }
         }
+    }
+}
+
+extension UIImage {
+    func resizeWithPercent(percentage: CGFloat) -> UIImage? {
+        let imageView = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: size.width * percentage, height: size.height * percentage)))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = self
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, scale)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        imageView.layer.render(in: context)
+        guard let result = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+        return result
     }
 }

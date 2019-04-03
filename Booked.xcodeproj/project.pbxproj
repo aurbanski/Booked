@@ -24,6 +24,7 @@
 		BA101C32225164CA000D94CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101C31225164CA000D94CB /* LoginViewController.swift */; };
 		BA101C34225164D9000D94CB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101C33225164D9000D94CB /* SignupViewController.swift */; };
 		BA56BCAB2251785E008A75D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA56BCAA2251785E008A75D0 /* GoogleService-Info.plist */; };
+		BAC6A11A2255415100AD65B6 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A1192255415100AD65B6 /* Posting.swift */; };
 		F5783AE531E0BFF619FF66E0 /* Pods_Booked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6379A83EE4D8B6584B74AEE4 /* Pods_Booked.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		BA101C31225164CA000D94CB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA101C33225164D9000D94CB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		BA56BCAA2251785E008A75D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BAC6A1192255415100AD65B6 /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 		BEBAF8CB65A5002242FE0991 /* Pods-Booked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booked.debug.xcconfig"; path = "Target Support Files/Pods-Booked/Pods-Booked.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 		BA101C2022515329000D94CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BAC6A1192255415100AD65B6 /* Posting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				BA06489822542E0200E77F8D /* AddTextbookViewController.swift in Sources */,
 				BA101C32225164CA000D94CB /* LoginViewController.swift in Sources */,
+				BAC6A11A2255415100AD65B6 /* Posting.swift in Sources */,
 				BA101C11225151F1000D94CB /* EntryViewController.swift in Sources */,
 				BA06489C22544A1300E77F8D /* TextbookTableViewCell.swift in Sources */,
 				BA101C34225164D9000D94CB /* SignupViewController.swift in Sources */,
