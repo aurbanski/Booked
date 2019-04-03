@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA06489822542E0200E77F8D /* AddTextbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06489722542E0200E77F8D /* AddTextbookViewController.swift */; };
+		BA06489C22544A1300E77F8D /* TextbookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA06489A22544A1300E77F8D /* TextbookTableViewCell.swift */; };
+		BA06489D22544A1300E77F8D /* TextbookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA06489B22544A1300E77F8D /* TextbookTableViewCell.xib */; };
 		BA101C0F225151F1000D94CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101C0E225151F1000D94CB /* AppDelegate.swift */; };
 		BA101C11225151F1000D94CB /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101C10225151F1000D94CB /* EntryViewController.swift */; };
 		BA101C14225151F1000D94CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA101C12225151F1000D94CB /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 /* Begin PBXFileReference section */
 		0E2E2283C1BF45C494A56F63 /* Pods-Booked.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booked.release.xcconfig"; path = "Target Support Files/Pods-Booked/Pods-Booked.release.xcconfig"; sourceTree = "<group>"; };
 		6379A83EE4D8B6584B74AEE4 /* Pods_Booked.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Booked.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA06489722542E0200E77F8D /* AddTextbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTextbookViewController.swift; sourceTree = "<group>"; };
+		BA06489A22544A1300E77F8D /* TextbookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookTableViewCell.swift; sourceTree = "<group>"; };
+		BA06489B22544A1300E77F8D /* TextbookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextbookTableViewCell.xib; sourceTree = "<group>"; };
 		BA101C0B225151F1000D94CB /* Booked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Booked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA101C0E225151F1000D94CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA101C10225151F1000D94CB /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
@@ -72,8 +78,16 @@
 				BEBAF8CB65A5002242FE0991 /* Pods-Booked.debug.xcconfig */,
 				0E2E2283C1BF45C494A56F63 /* Pods-Booked.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA064899225449E900E77F8D /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA06489A22544A1300E77F8D /* TextbookTableViewCell.swift */,
+				BA06489B22544A1300E77F8D /* TextbookTableViewCell.xib */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		BA101C02225151F1000D94CB = {
@@ -116,6 +130,7 @@
 		BA101C212251532F000D94CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA064899225449E900E77F8D /* Custom Views */,
 				BA101C17225151F2000D94CB /* LaunchScreen.storyboard */,
 				BA101C12225151F1000D94CB /* Main.storyboard */,
 			);
@@ -129,6 +144,7 @@
 				BA101C10225151F1000D94CB /* EntryViewController.swift */,
 				BA101C31225164CA000D94CB /* LoginViewController.swift */,
 				BA101C33225164D9000D94CB /* SignupViewController.swift */,
+				BA06489722542E0200E77F8D /* AddTextbookViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -225,6 +241,7 @@
 				BA101C30225158CD000D94CB /* Poppins-SemiBold.ttf in Resources */,
 				BA56BCAB2251785E008A75D0 /* GoogleService-Info.plist in Resources */,
 				BA101C26225158B8000D94CB /* AbrilFatface-Regular.ttf in Resources */,
+				BA06489D22544A1300E77F8D /* TextbookTableViewCell.xib in Resources */,
 				BA101C2C225158CD000D94CB /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,9 +257,22 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Booked/Pods-Booked-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Booked/Pods-Booked-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Booked/Pods-Booked-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -278,8 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA06489822542E0200E77F8D /* AddTextbookViewController.swift in Sources */,
 				BA101C32225164CA000D94CB /* LoginViewController.swift in Sources */,
 				BA101C11225151F1000D94CB /* EntryViewController.swift in Sources */,
+				BA06489C22544A1300E77F8D /* TextbookTableViewCell.swift in Sources */,
 				BA101C34225164D9000D94CB /* SignupViewController.swift in Sources */,
 				BA101C0F225151F1000D94CB /* AppDelegate.swift in Sources */,
 			);
