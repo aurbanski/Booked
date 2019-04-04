@@ -307,7 +307,7 @@
             </objects>
             <point key="canvasLocation" x="1148" y="1152"/>
         </scene>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="xfj-09-Qhs">
             <objects>
                 <viewController id="5dC-K4-sfQ" sceneMemberID="viewController">
@@ -342,7 +342,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LvX-J1-WPi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="LfK-rS-xjp"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabicon-5" id="LfK-rS-xjp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAm-lI-0Ht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -411,7 +411,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Cz8-Sg-s5j"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="tub-Oh-JLn"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabicon-2" id="tub-Oh-JLn"/>
                     <connections>
                         <outlet property="ISBNTextField" destination="ohJ-oG-jaY" id="Z4k-3u-d5d"/>
                         <outlet property="authorTextField" destination="G6x-qT-PZ1" id="1HW-2A-THM"/>
@@ -491,7 +491,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ePI-9b-Ogb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="OCa-XC-Guc"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabicon-3" id="OCa-XC-Guc"/>
                     <connections>
                         <outlet property="postingsCollectionView" destination="Qde-LD-Jhf" id="H0Z-6a-Jrd"/>
                     </connections>
@@ -508,6 +508,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.56078431370000004" green="0.83529411760000005" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="w0D-WB-r9I" kind="relationship" relationship="viewControllers" id="ZxI-Gb-GAK"/>
@@ -680,6 +681,9 @@
     </scenes>
     <resources>
         <image name="booksTransparent" width="1249.5" height="1248"/>
+        <image name="tabicon-2" width="25" height="25"/>
+        <image name="tabicon-3" width="25" height="25"/>
+        <image name="tabicon-5" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K0F-zR-Q64"/>
