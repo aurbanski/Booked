@@ -24,6 +24,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="189.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LmD-L6-TYF">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="189.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LOq-7C-w7M">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                         <constraints>
@@ -35,7 +39,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS8-rG-47a">
-                        <rect key="frame" x="7" y="157" width="44.5" height="21"/>
+                        <rect key="frame" x="7" y="157" width="48.5" height="30"/>
                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                         <color key="textColor" red="0.5607843137254902" green="0.83529411764705885" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -54,12 +58,16 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="VS8-rG-47a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="2pR-lr-MCl"/>
+                    <constraint firstItem="LmD-L6-TYF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8l7-Rd-RJr"/>
                     <constraint firstAttribute="trailing" secondItem="x1O-CO-CO8" secondAttribute="trailing" constant="8" id="Fij-LF-LZJ"/>
+                    <constraint firstAttribute="trailing" secondItem="LmD-L6-TYF" secondAttribute="trailing" id="Flb-T9-PLc"/>
                     <constraint firstItem="VS8-rG-47a" firstAttribute="top" secondItem="LOq-7C-w7M" secondAttribute="bottom" constant="7" id="KZo-MU-bwa"/>
                     <constraint firstItem="LOq-7C-w7M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WNr-Qq-0aQ"/>
                     <constraint firstItem="x1O-CO-CO8" firstAttribute="top" secondItem="LOq-7C-w7M" secondAttribute="bottom" constant="9" id="Ysb-T8-MhT"/>
                     <constraint firstItem="LOq-7C-w7M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eVp-4g-eIT"/>
+                    <constraint firstItem="LmD-L6-TYF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ev2-yJ-gck"/>
                     <constraint firstAttribute="trailing" secondItem="LOq-7C-w7M" secondAttribute="trailing" id="hJj-TF-tpc"/>
+                    <constraint firstAttribute="bottom" secondItem="LmD-L6-TYF" secondAttribute="bottom" id="mlF-S5-RyF"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -67,6 +75,7 @@
                 <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="backView" destination="LmD-L6-TYF" id="zCD-GY-RE2"/>
                 <outlet property="bookImageView" destination="LOq-7C-w7M" id="ZlV-7x-DV7"/>
                 <outlet property="priceTextField" destination="VS8-rG-47a" id="p1u-Qh-zyt"/>
             </connections>
