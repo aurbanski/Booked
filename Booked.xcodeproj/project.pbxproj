@@ -24,6 +24,9 @@
 		BA101C32225164CA000D94CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101C31225164CA000D94CB /* LoginViewController.swift */; };
 		BA101C34225164D9000D94CB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101C33225164D9000D94CB /* SignupViewController.swift */; };
 		BA56BCAB2251785E008A75D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA56BCAA2251785E008A75D0 /* GoogleService-Info.plist */; };
+		BA69AA292257C075002F675B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69AA282257C075002F675B /* CartViewController.swift */; };
+		BA69AA2C2257C174002F675B /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69AA2A2257C174002F675B /* CartTableViewCell.swift */; };
+		BA69AA2D2257C174002F675B /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA69AA2B2257C174002F675B /* CartTableViewCell.xib */; };
 		BAC6A11A2255415100AD65B6 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A1192255415100AD65B6 /* Posting.swift */; };
 		BAC6A11C2255437A00AD65B6 /* ViewPostingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A11B2255437A00AD65B6 /* ViewPostingsViewController.swift */; };
 		F5783AE531E0BFF619FF66E0 /* Pods_Booked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6379A83EE4D8B6584B74AEE4 /* Pods_Booked.framework */; };
@@ -51,6 +54,9 @@
 		BA101C31225164CA000D94CB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA101C33225164D9000D94CB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		BA56BCAA2251785E008A75D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA69AA282257C075002F675B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		BA69AA2A2257C174002F675B /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		BA69AA2B2257C174002F675B /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		BAC6A1192255415100AD65B6 /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 		BAC6A11B2255437A00AD65B6 /* ViewPostingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostingsViewController.swift; sourceTree = "<group>"; };
 		BEBAF8CB65A5002242FE0991 /* Pods-Booked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booked.debug.xcconfig"; path = "Target Support Files/Pods-Booked/Pods-Booked.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +96,8 @@
 			children = (
 				BA06489A22544A1300E77F8D /* TextbookTableViewCell.swift */,
 				BA06489B22544A1300E77F8D /* TextbookTableViewCell.xib */,
+				BA69AA2A2257C174002F675B /* CartTableViewCell.swift */,
+				BA69AA2B2257C174002F675B /* CartTableViewCell.xib */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 				BA101C33225164D9000D94CB /* SignupViewController.swift */,
 				BA06489722542E0200E77F8D /* AddTextbookViewController.swift */,
 				BAC6A11B2255437A00AD65B6 /* ViewPostingsViewController.swift */,
+				BA69AA282257C075002F675B /* CartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +250,7 @@
 				BA101C19225151F2000D94CB /* LaunchScreen.storyboard in Resources */,
 				BA101C16225151F2000D94CB /* Assets.xcassets in Resources */,
 				BA101C2E225158CD000D94CB /* Poppins-Bold.ttf in Resources */,
+				BA69AA2D2257C174002F675B /* CartTableViewCell.xib in Resources */,
 				BA101C2F225158CD000D94CB /* Poppins-Light.ttf in Resources */,
 				BA101C14225151F1000D94CB /* Main.storyboard in Resources */,
 				BA101C2D225158CD000D94CB /* Poppins-Regular.ttf in Resources */,
@@ -308,6 +318,8 @@
 				BA101C11225151F1000D94CB /* EntryViewController.swift in Sources */,
 				BA06489C22544A1300E77F8D /* TextbookTableViewCell.swift in Sources */,
 				BA101C34225164D9000D94CB /* SignupViewController.swift in Sources */,
+				BA69AA2C2257C174002F675B /* CartTableViewCell.swift in Sources */,
+				BA69AA292257C075002F675B /* CartViewController.swift in Sources */,
 				BA101C0F225151F1000D94CB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

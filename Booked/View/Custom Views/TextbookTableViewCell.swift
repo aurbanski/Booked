@@ -44,10 +44,7 @@ class TextbookTableViewCell: UICollectionViewCell {
     
     @IBAction func addToCartPressed(_ sender: Any) {
         Database.database().reference().child("Carts").queryOrdered(byChild: "userID").queryEqual(toValue: Auth.auth().currentUser?.uid).observeSingleEvent(of: .childAdded) { (snapshot) in
-            snapshot.ref.updateChildValues([self.posting!.uid: true])
+            snapshot.ref.child("Postings").updateChildValues([self.posting!.uid: true])
         }
-//        print(cart)
-//        cart.setValue(true, forKey: posting!.uid)
     }
-    
 }

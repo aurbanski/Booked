@@ -307,46 +307,44 @@
             </objects>
             <point key="canvasLocation" x="1148" y="1152"/>
         </scene>
-        <!--View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="xfj-09-Qhs">
             <objects>
-                <viewController id="5dC-K4-sfQ" sceneMemberID="viewController">
+                <viewController id="5dC-K4-sfQ" customClass="CartViewController" customModule="Booked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OCG-P7-BVJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ts-Ky-3T0">
-                                <rect key="frame" x="50" y="50" width="275" height="458"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNv-vK-X9M">
-                                <rect key="frame" x="0.0" y="558" width="375" height="60"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Gwa-Du-nu3"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="20"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zHU-uz-tzb">
+                                <rect key="frame" x="10" y="120" width="355" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpk-1e-onK">
+                                <rect key="frame" x="20" y="50" width="86" height="54"/>
+                                <fontDescription key="fontDescription" name="AbrilFatface-Regular" family="Abril Fatface" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LvX-J1-WPi" firstAttribute="trailing" secondItem="mNv-vK-X9M" secondAttribute="trailing" id="9Yy-qZ-WNG"/>
-                            <constraint firstItem="LvX-J1-WPi" firstAttribute="trailing" secondItem="4ts-Ky-3T0" secondAttribute="trailing" constant="50" id="HsS-Ew-2Ts"/>
-                            <constraint firstItem="mNv-vK-X9M" firstAttribute="bottom" secondItem="LvX-J1-WPi" secondAttribute="bottom" id="MD1-VX-1ev"/>
-                            <constraint firstItem="mNv-vK-X9M" firstAttribute="leading" secondItem="LvX-J1-WPi" secondAttribute="leading" id="aAJ-6N-t93"/>
-                            <constraint firstItem="4ts-Ky-3T0" firstAttribute="top" secondItem="LvX-J1-WPi" secondAttribute="top" constant="30" id="fF5-7u-h6d"/>
-                            <constraint firstItem="4ts-Ky-3T0" firstAttribute="leading" secondItem="LvX-J1-WPi" secondAttribute="leading" constant="50" id="rYc-TE-KDm"/>
-                            <constraint firstItem="mNv-vK-X9M" firstAttribute="top" secondItem="4ts-Ky-3T0" secondAttribute="bottom" constant="50" id="xSH-aJ-5kq"/>
+                            <constraint firstItem="zHU-uz-tzb" firstAttribute="bottom" secondItem="LvX-J1-WPi" secondAttribute="bottom" id="7Mu-ue-eKa"/>
+                            <constraint firstItem="zHU-uz-tzb" firstAttribute="leading" secondItem="LvX-J1-WPi" secondAttribute="leading" constant="10" id="SOf-eZ-WbY"/>
+                            <constraint firstItem="LvX-J1-WPi" firstAttribute="trailing" secondItem="zHU-uz-tzb" secondAttribute="trailing" constant="10" id="cvv-se-x7f"/>
+                            <constraint firstItem="zHU-uz-tzb" firstAttribute="top" secondItem="LvX-J1-WPi" secondAttribute="top" constant="100" id="nVj-mO-DPI"/>
+                            <constraint firstItem="dpk-1e-onK" firstAttribute="leading" secondItem="LvX-J1-WPi" secondAttribute="leading" constant="20" id="pCF-Zd-W1U"/>
+                            <constraint firstItem="dpk-1e-onK" firstAttribute="top" secondItem="LvX-J1-WPi" secondAttribute="top" constant="30" id="u70-VJ-5aL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LvX-J1-WPi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabicon-5" id="LfK-rS-xjp"/>
+                    <connections>
+                        <outlet property="cartTableView" destination="zHU-uz-tzb" id="RwG-mU-yQH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAm-lI-0Ht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3644" y="439"/>
+            <point key="canvasLocation" x="3644" y="438.53073463268368"/>
         </scene>
         <!--AddTextbook-->
         <scene sceneID="KtI-kx-3mL">
@@ -462,17 +460,17 @@
                                 <rect key="frame" x="0.0" y="160" width="375" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="0.0" id="ad0-g9-cff">
-                                    <size key="itemSize" width="166" height="206"/>
+                                    <size key="itemSize" width="166" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="X6P-Ri-N9W" customClass="TextbookTableViewCell" customModule="Booked" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="20" width="166" height="206"/>
+                                        <rect key="frame" x="20" y="20" width="166" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="166" height="206"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
