@@ -7,7 +7,7 @@
 //
 
 class Posting {
-    
+    var uid: String = ""
     var title: String = ""
     var author: String = ""
     var isbn: String = ""

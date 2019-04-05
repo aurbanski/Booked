@@ -24,6 +24,17 @@ class SignupViewController: UIViewController {
                 print(error!)
             } else {
                 print("Success!")
+                let cartsDB = Database.database().reference().child("Carts")
+                let cart = ["userID": user?.user.uid]
+                
+                cartsDB.childByAutoId().setValue(cart) {
+                    (error, reference) in
+                    if error != nil {
+                        print(error!)
+                    } else {
+                        print("Posting inserted in database")
+                    }
+                }
                 self.performSegue(withIdentifier: "goToTabs", sender: self)
             }
         }

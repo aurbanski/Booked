@@ -50,6 +50,7 @@ class ViewPostingsViewController: UIViewController, UICollectionViewDataSource, 
     
     func populatePosting(posting: Posting, snapshot: Dictionary<String, String>) -> Posting {
         
+        posting.uid = snapshot["UID"]!
         posting.title = snapshot["Title"]!
         posting.author = snapshot["Author"]!
         posting.isbn = snapshot["ISBN"]!

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TextbookTableViewCell: UICollectionViewCell {
     var posting: Posting?
@@ -42,9 +43,11 @@ class TextbookTableViewCell: UICollectionViewCell {
     }
     
     @IBAction func addToCartPressed(_ sender: Any) {
-//        if let postingForHandler = posting {
-//            
-//        }
+        Database.database().reference().child("Carts").queryOrdered(byChild: "userID").queryEqual(toValue: Auth.auth().currentUser?.uid).observeSingleEvent(of: .childAdded) { (snapshot) in
+            snapshot.ref.updateChildValues([self.posting!.uid: true])
+        }
+//        print(cart)
+//        cart.setValue(true, forKey: posting!.uid)
     }
     
 }

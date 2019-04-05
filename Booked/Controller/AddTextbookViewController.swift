@@ -46,8 +46,9 @@ class AddTextbookViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func submitButtonPressed(_ sender: Any) {
         toggleEnabledViews(false)
-        let uuid = NSUUID().uuidString + ".jpeg"
-        let storage = Storage.storage().reference().child(uuid)
+        let uuid = NSUUID().uuidString
+        let uuidImage = uuid + ".jpeg"
+        let storage = Storage.storage().reference().child(uuidImage)
         var downloadURL: String?
         
         if uploadImage != nil {
@@ -55,15 +56,15 @@ class AddTextbookViewController: UIViewController, UIImagePickerControllerDelega
                 if error != nil {
                     print(error!)
                 } else {
-                    Storage.storage().reference().child(uuid).downloadURL { (url, error) in
+                    Storage.storage().reference().child(uuidImage).downloadURL { (url, error) in
                         if error != nil {
                             print(error!)
                         } else {
                             downloadURL = url?.absoluteString
                             let listingsDB = Database.database().reference().child("Postings")
-                            let posting = ["Title": self.titleTextField.text!, "Author": self.authorTextField.text!, "ISBN": self.ISBNTextField.text!, "Price": self.priceTextField.text!, "Condition": self.conditionTextField.text!, "Seller": Auth.auth().currentUser?.email!, "ImageURL": downloadURL!]
+                            let posting = ["UID": uuid, "Title": self.titleTextField.text!, "Author": self.authorTextField.text!, "ISBN": self.ISBNTextField.text!, "Price": self.priceTextField.text!, "Condition": self.conditionTextField.text!, "Seller": Auth.auth().currentUser?.email!, "ImageURL": downloadURL!]
                             
-                            listingsDB.childByAutoId().setValue(posting) {
+                            listingsDB.child(uuid).setValue(posting) {
                                 (error, reference) in
                                 if error != nil {
                                     print(error!)
