@@ -11,6 +11,7 @@ import Firebase
 
 class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var myPageViewController: CheckoutPageViewController?
     var cartArray: [Posting] = [Posting]()
     @IBOutlet weak var cartTableView: UITableView!
     
@@ -25,6 +26,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         configureTableView()
         retrievePostings()
         cartTableView.separatorStyle = .none
+        myPageViewController = self.parent as! CheckoutPageViewController
     }
     
     func configureTableView() {
@@ -72,10 +74,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     func retrievePostings() {
         Database.database().reference().child("Carts").queryOrdered(byChild: "userID").queryEqual(toValue: Auth.auth().currentUser?.uid).observeSingleEvent(of: .childAdded) { (snapshot) in
             snapshot.ref.child("Postings").observe(.childAdded, with: { (innerSnapshot) in
-                print(innerSnapshot.key)
                 Database.database().reference().child("Postings/\(innerSnapshot.key)").observeSingleEvent(of: .value, with: { (postingSnapshot) in
-                    print("Posting Snapshot")
-                    print(postingSnapshot)
                     let snapshotValue = postingSnapshot.value as! Dictionary<String, String>
                     let posting = self.populatePosting(posting: Posting(), snapshot: snapshotValue)
                     
@@ -86,5 +85,8 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.configureTableView()
             })
         }
+    }
+    @IBAction func continueButtonPressed(_ sender: Any) {
+        myPageViewController?.nextPage()
     }
 }
