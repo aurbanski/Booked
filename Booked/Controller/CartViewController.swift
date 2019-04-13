@@ -11,6 +11,7 @@ import Firebase
 
 class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var totalCost: Int = 0
     var myPageViewController: CheckoutPageViewController?
     var cartArray: [Posting] = [Posting]()
     @IBOutlet weak var cartTableView: UITableView!
@@ -36,6 +37,9 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
         
+        var price = cartArray[indexPath.row].price
+        price.remove(at: price.startIndex)
+        totalCost += Int(price)!
         cell.titleLabel.text = cartArray[indexPath.row].title
         cell.authorLabel.text = cartArray[indexPath.row].author
         cell.priceLabel.text = cartArray[indexPath.row].price
@@ -71,6 +75,16 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         return posting
     }
     
+    func purchaseToast() {
+        self.view.makeToast("Transaction Complete", duration: 3.0, position: .top)
+    }
+    
+    func deleteAllPostings() {
+        self.cartArray = []
+        self.cartTableView.reloadData()
+        self.configureTableView()
+    }
+    
     func retrievePostings() {
         Database.database().reference().child("Carts").queryOrdered(byChild: "userID").queryEqual(toValue: Auth.auth().currentUser?.uid).observeSingleEvent(of: .childAdded) { (snapshot) in
             snapshot.ref.child("Postings").observe(.childAdded, with: { (innerSnapshot) in
@@ -86,7 +100,9 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
         }
     }
+    
     @IBAction func continueButtonPressed(_ sender: Any) {
+        myPageViewController?.totalCost = totalCost
         myPageViewController?.nextPage()
     }
 }

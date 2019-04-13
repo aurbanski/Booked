@@ -23,6 +23,8 @@
 		BA101C30225158CD000D94CB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA101C2B225158CD000D94CB /* Poppins-SemiBold.ttf */; };
 		BA101C32225164CA000D94CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101C31225164CA000D94CB /* LoginViewController.swift */; };
 		BA101C34225164D9000D94CB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101C33225164D9000D94CB /* SignupViewController.swift */; };
+		BA2364282262513E0016A236 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2364272262513E0016A236 /* TransactionService.swift */; };
+		BA23642A226254460016A236 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA236429226254460016A236 /* CreditCard.swift */; };
 		BA56BCAB2251785E008A75D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA56BCAA2251785E008A75D0 /* GoogleService-Info.plist */; };
 		BA69AA292257C075002F675B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69AA282257C075002F675B /* CartViewController.swift */; };
 		BA69AA2C2257C174002F675B /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69AA2A2257C174002F675B /* CartTableViewCell.swift */; };
@@ -34,6 +36,7 @@
 		BAC61550226133FA00C5E339 /* ShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6154F226133FA00C5E339 /* ShippingViewController.swift */; };
 		BAC6A11A2255415100AD65B6 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A1192255415100AD65B6 /* Posting.swift */; };
 		BAC6A11C2255437A00AD65B6 /* ViewPostingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A11B2255437A00AD65B6 /* ViewPostingsViewController.swift */; };
+		BAC6E1AA226260E800637A8E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6E1A9226260E700637A8E /* Toast.swift */; };
 		F5783AE531E0BFF619FF66E0 /* Pods_Booked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6379A83EE4D8B6584B74AEE4 /* Pods_Booked.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,8 @@
 		BA101C2B225158CD000D94CB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		BA101C31225164CA000D94CB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA101C33225164D9000D94CB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		BA2364272262513E0016A236 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
+		BA236429226254460016A236 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		BA56BCAA2251785E008A75D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA69AA282257C075002F675B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		BA69AA2A2257C174002F675B /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 		BAC6154F226133FA00C5E339 /* ShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingViewController.swift; sourceTree = "<group>"; };
 		BAC6A1192255415100AD65B6 /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 		BAC6A11B2255437A00AD65B6 /* ViewPostingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostingsViewController.swift; sourceTree = "<group>"; };
+		BAC6E1A9226260E700637A8E /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		BEBAF8CB65A5002242FE0991 /* Pods-Booked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booked.debug.xcconfig"; path = "Target Support Files/Pods-Booked/Pods-Booked.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +153,7 @@
 			children = (
 				BAC6A1192255415100AD65B6 /* Posting.swift */,
 				BA92A575226142E700252F53 /* Address.swift */,
+				BA236429226254460016A236 /* CreditCard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,9 +189,11 @@
 		BA101C2322515362000D94CB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BAC6E1A9226260E700637A8E /* Toast.swift */,
 				BA56BCAA2251785E008A75D0 /* GoogleService-Info.plist */,
 				BA101C2422515893000D94CB /* Fonts */,
 				BA101C1A225151F2000D94CB /* Info.plist */,
+				BA2364272262513E0016A236 /* TransactionService.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,9 +297,24 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Booked/Pods-Booked-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Booked/Pods-Booked-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Booked/Pods-Booked-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -333,12 +357,15 @@
 				BA101C11225151F1000D94CB /* EntryViewController.swift in Sources */,
 				BA06489C22544A1300E77F8D /* TextbookTableViewCell.swift in Sources */,
 				BA92A576226142E700252F53 /* Address.swift in Sources */,
+				BAC6E1AA226260E800637A8E /* Toast.swift in Sources */,
 				BAC6154E226133EA00C5E339 /* BillingViewController.swift in Sources */,
 				BA101C34225164D9000D94CB /* SignupViewController.swift in Sources */,
 				BAC6154C2261106200C5E339 /* CheckoutPageViewController.swift in Sources */,
+				BA2364282262513E0016A236 /* TransactionService.swift in Sources */,
 				BA69AA2C2257C174002F675B /* CartTableViewCell.swift in Sources */,
 				BA69AA292257C075002F675B /* CartViewController.swift in Sources */,
 				BA101C0F225151F1000D94CB /* AppDelegate.swift in Sources */,
+				BA23642A226254460016A236 /* CreditCard.swift in Sources */,
 				BAC61550226133FA00C5E339 /* ShippingViewController.swift in Sources */,
 				BA92A578226168B900252F53 /* CreditCardViewController.swift in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreditCardViewController: UIViewController {
     
@@ -16,6 +17,8 @@ class CreditCardViewController: UIViewController {
     @IBOutlet weak var cardNumberTextField: UITextField!
     @IBOutlet weak var expDateTextField: UITextField!
     @IBOutlet weak var cvvTextField: UITextField!
+    @IBOutlet weak var bookCostLabel: UILabel!
+    @IBOutlet weak var totalCostLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -23,6 +26,9 @@ class CreditCardViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         myPageViewController = self.parent as! CheckoutPageViewController
+        bookCostLabel.text = "$\((myPageViewController?.totalCost)!).00"
+        totalCostLabel.text = "$\(Float((myPageViewController?.totalCost)!) + 5.99)"
+        
     }
     
 
@@ -35,9 +41,34 @@ class CreditCardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func clearCart() {
+        Database.database().reference().child("Carts").queryOrdered(byChild: "userID").queryEqual(toValue: Auth.auth().currentUser?.uid).observeSingleEvent(of: .childAdded) { (snapshot) in
+            snapshot.ref.child("Postings")
+            snapshot.ref.child("Postings").observe(.childAdded, with: { (innerSnapshot) in
+                Database.database().reference().child("Postings").child(innerSnapshot.key).removeValue()
+            })
+            Database.database().reference().child("Carts").child(snapshot.key).child("Postings").removeValue()
+        }
+    }
+    
     @IBAction func placeOrderButtonPressed(_ sender: Any) {
+        let creditCard = CreditCard()
+        creditCard.name = nameTextField.text!
+        creditCard.cardNumber = cardNumberTextField.text!
+        creditCard.expirationDate = expDateTextField.text!
+        creditCard.cvv = cvvTextField.text!
         
-        //        TODO: Set this up with the mock 
+        let transactionService = TransactionService()
+        let result = transactionService.attemptPurchase(cost: (myPageViewController?.totalCost)!, address: (myPageViewController?.address)!, creditCard: creditCard)
+        
+        if result > 0 {
+            clearCart()
+            myPageViewController?.goToFirstPage()
+        } else {
+            self.view.makeToast("Something went wrong. Make sure you filled out all of the information", duration: 3.0, position: .top)
+        }
+        
     }
     
 }

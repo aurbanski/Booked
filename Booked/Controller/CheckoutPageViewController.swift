@@ -15,6 +15,7 @@ class CheckoutPageViewController: UIPageViewController, UIPageViewControllerDele
     var pageControl = UIPageControl()
     var currentPage = 0
     var address: Address?
+    var totalCost: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,15 @@ class CheckoutPageViewController: UIPageViewController, UIPageViewControllerDele
             setViewControllers([pageViewControllers[currentPage + 1]], direction: .forward, animated: true, completion: nil)
             currentPage += 1
         }
+    }
+    
+    func goToFirstPage() {
+        let cartViewController = pageViewControllers[0] as! CartViewController
+        cartViewController.deleteAllPostings()
+        cartViewController.purchaseToast()
+        
+        setViewControllers([pageViewControllers[0]], direction: .forward, animated: true, completion: nil)
+        currentPage = 0
     }
     
     func getVC(viewController: String) -> UIViewController {

@@ -68,7 +68,9 @@ class AddTextbookViewController: UIViewController, UIImagePickerControllerDelega
                                 (error, reference) in
                                 if error != nil {
                                     print(error!)
+                                    self.view.makeToast("\(error!)", duration: 3.0, position: .top)
                                 } else {
+                                    self.view.makeToast("Textbook has been posted", duration: 3.0, position: .top)
                                     print("Posting inserted in database")
                                     self.toggleEnabledViews(true)
                                     self.titleTextField.text = ""

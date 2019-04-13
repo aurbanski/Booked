@@ -62,6 +62,10 @@ class ViewPostingsViewController: UIViewController, UICollectionViewDataSource, 
         return posting
     }
     
+    func deletePosting(uid: String) {
+        self.postingsArray = self.postingsArray.filter() { $0.uid != uid }
+    }
+    
     func getPostings() {
         let postingsDB = Database.database().reference().child("Postings")
         postingsDB.observe(.childAdded) { (snapshot) in
@@ -69,6 +73,13 @@ class ViewPostingsViewController: UIViewController, UICollectionViewDataSource, 
             let posting = self.populatePosting(posting: Posting(), snapshot: snapshotValue)
             
             self.postingsArray.append(posting)
+            self.postingsCollectionView.reloadData()
+        }
+        
+        postingsDB.observe(.childRemoved) { (snapshot) in
+            let snapshotValue = snapshot.value as! Dictionary<String, String>
+            
+            self.deletePosting(uid: snapshotValue["UID"]!)
             self.postingsCollectionView.reloadData()
         }
     }
