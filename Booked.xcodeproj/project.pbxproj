@@ -28,6 +28,7 @@
 		BA69AA2C2257C174002F675B /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69AA2A2257C174002F675B /* CartTableViewCell.swift */; };
 		BA69AA2D2257C174002F675B /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA69AA2B2257C174002F675B /* CartTableViewCell.xib */; };
 		BA92A576226142E700252F53 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA92A575226142E700252F53 /* Address.swift */; };
+		BA92A578226168B900252F53 /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA92A577226168B900252F53 /* CreditCardViewController.swift */; };
 		BAC6154C2261106200C5E339 /* CheckoutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6154B2261106200C5E339 /* CheckoutPageViewController.swift */; };
 		BAC6154E226133EA00C5E339 /* BillingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6154D226133EA00C5E339 /* BillingViewController.swift */; };
 		BAC61550226133FA00C5E339 /* ShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6154F226133FA00C5E339 /* ShippingViewController.swift */; };
@@ -62,6 +63,7 @@
 		BA69AA2A2257C174002F675B /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		BA69AA2B2257C174002F675B /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		BA92A575226142E700252F53 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		BA92A577226168B900252F53 /* CreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
 		BAC6154B2261106200C5E339 /* CheckoutPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutPageViewController.swift; sourceTree = "<group>"; };
 		BAC6154D226133EA00C5E339 /* BillingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingViewController.swift; sourceTree = "<group>"; };
 		BAC6154F226133FA00C5E339 /* ShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				BAC6154B2261106200C5E339 /* CheckoutPageViewController.swift */,
 				BAC6154D226133EA00C5E339 /* BillingViewController.swift */,
 				BAC6154F226133FA00C5E339 /* ShippingViewController.swift */,
+				BA92A577226168B900252F53 /* CreditCardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				BA69AA292257C075002F675B /* CartViewController.swift in Sources */,
 				BA101C0F225151F1000D94CB /* AppDelegate.swift in Sources */,
 				BAC61550226133FA00C5E339 /* ShippingViewController.swift in Sources */,
+				BA92A578226168B900252F53 /* CreditCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

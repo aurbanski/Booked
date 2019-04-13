@@ -23,7 +23,6 @@ class ShippingViewController: UIViewController {
         super.viewDidLoad()
 
         myPageViewController = self.parent as! CheckoutPageViewController
-        print(myPageViewController)
         autoFillFields()
         // Do any additional setup after loading the view.
     }
@@ -92,7 +91,7 @@ class ShippingViewController: UIViewController {
         }
     }
     
-    @IBAction func placeOrderButtonPressed(_ sender: Any) {
+    @IBAction func continueButtonPressed(_ sender: Any) {
         myPageViewController = self.parent as! CheckoutPageViewController
         let fullAddress = myPageViewController?.address!
         fullAddress?.billingName = nameTextField.text!
@@ -100,5 +99,7 @@ class ShippingViewController: UIViewController {
         fullAddress?.billingState = stateTextField.text!
         fullAddress?.billingCity = cityTextField.text!
         fullAddress?.billingZip = zipTextField.text!
+        myPageViewController?.address = fullAddress
+        myPageViewController?.nextPage()
     }
 }

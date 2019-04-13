@@ -10,7 +10,7 @@ import UIKit
 
 class CheckoutPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
 
-    lazy var pageViewControllers: [UIViewController] = [self.getVC(viewController: "cartView"), self.getVC(viewController: "billingInfo"), self.getVC(viewController: "shippingInfo")]
+    lazy var pageViewControllers: [UIViewController] = [self.getVC(viewController: "cartView"), self.getVC(viewController: "billingInfo"), self.getVC(viewController: "shippingInfo"), self.getVC(viewController: "cardInfo")]
     
     var pageControl = UIPageControl()
     var currentPage = 0
@@ -39,7 +39,9 @@ class CheckoutPageViewController: UIPageViewController, UIPageViewControllerDele
     }
     
     func nextPage() {
+        print("Here1")
         if currentPage < pageViewControllers.count {
+            print("Here2")
             setViewControllers([pageViewControllers[currentPage + 1]], direction: .forward, animated: true, completion: nil)
             currentPage += 1
         }
