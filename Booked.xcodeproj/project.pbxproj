@@ -23,6 +23,9 @@
 		BA101C30225158CD000D94CB /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA101C2B225158CD000D94CB /* Poppins-SemiBold.ttf */; };
 		BA101C32225164CA000D94CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101C31225164CA000D94CB /* LoginViewController.swift */; };
 		BA101C34225164D9000D94CB /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101C33225164D9000D94CB /* SignupViewController.swift */; };
+		BA1F14DE226D2CD6006D8BDF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F14DD226D2CD6006D8BDF /* SearchViewController.swift */; };
+		BA1F14E3226D316F006D8BDF /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1F14E1226D316F006D8BDF /* SearchTableViewCell.swift */; };
+		BA1F14E4226D316F006D8BDF /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA1F14E2226D316F006D8BDF /* SearchTableViewCell.xib */; };
 		BA2364282262513E0016A236 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2364272262513E0016A236 /* TransactionService.swift */; };
 		BA23642A226254460016A236 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA236429226254460016A236 /* CreditCard.swift */; };
 		BA56BCAB2251785E008A75D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA56BCAA2251785E008A75D0 /* GoogleService-Info.plist */; };
@@ -61,6 +64,9 @@
 		BA101C2B225158CD000D94CB /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		BA101C31225164CA000D94CB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA101C33225164D9000D94CB /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		BA1F14DD226D2CD6006D8BDF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BA1F14E1226D316F006D8BDF /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		BA1F14E2226D316F006D8BDF /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		BA2364272262513E0016A236 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
 		BA236429226254460016A236 /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		BA56BCAA2251785E008A75D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 				BA06489B22544A1300E77F8D /* TextbookTableViewCell.xib */,
 				BA69AA2A2257C174002F675B /* CartTableViewCell.swift */,
 				BA69AA2B2257C174002F675B /* CartTableViewCell.xib */,
+				BA1F14E1226D316F006D8BDF /* SearchTableViewCell.swift */,
+				BA1F14E2226D316F006D8BDF /* SearchTableViewCell.xib */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 				BAC6154D226133EA00C5E339 /* BillingViewController.swift */,
 				BAC6154F226133FA00C5E339 /* ShippingViewController.swift */,
 				BA92A577226168B900252F53 /* CreditCardViewController.swift */,
+				BA1F14DD226D2CD6006D8BDF /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,6 +292,7 @@
 				BA101C26225158B8000D94CB /* AbrilFatface-Regular.ttf in Resources */,
 				BA06489D22544A1300E77F8D /* TextbookTableViewCell.xib in Resources */,
 				BA101C2C225158CD000D94CB /* Poppins-Medium.ttf in Resources */,
+				BA1F14E4226D316F006D8BDF /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,10 +364,12 @@
 				BA06489822542E0200E77F8D /* AddTextbookViewController.swift in Sources */,
 				BA101C32225164CA000D94CB /* LoginViewController.swift in Sources */,
 				BAC6A11A2255415100AD65B6 /* Posting.swift in Sources */,
+				BA1F14DE226D2CD6006D8BDF /* SearchViewController.swift in Sources */,
 				BA101C11225151F1000D94CB /* EntryViewController.swift in Sources */,
 				BA06489C22544A1300E77F8D /* TextbookTableViewCell.swift in Sources */,
 				BA92A576226142E700252F53 /* Address.swift in Sources */,
 				BAC6E1AA226260E800637A8E /* Toast.swift in Sources */,
+				BA1F14E3226D316F006D8BDF /* SearchTableViewCell.swift in Sources */,
 				BAC6154E226133EA00C5E339 /* BillingViewController.swift in Sources */,
 				BA101C34225164D9000D94CB /* SignupViewController.swift in Sources */,
 				BAC6154C2261106200C5E339 /* CheckoutPageViewController.swift in Sources */,
