@@ -27,6 +27,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="345" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="roc-du-u5M" userLabel="ShadowLayer" customClass="ShadowView" customModule="Booked" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="325" height="129.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RXS-db-OZz" userLabel="MainBackground">
+                        <rect key="frame" x="10" y="10" width="325" height="129.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aFD-A1-6yk">
                         <rect key="frame" x="205" y="10" width="130" height="130"/>
                         <constraints>
@@ -35,7 +43,7 @@
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kik-lf-Wlt">
-                        <rect key="frame" x="10" y="15" width="190" height="120"/>
+                        <rect key="frame" x="26" y="15" width="174" height="120"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyB-5n-vyQ">
                                 <rect key="frame" x="10" y="10" width="52" height="27"/>
@@ -56,7 +64,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq9-jL-OJj">
-                                <rect key="frame" x="163" y="15" width="17" height="17"/>
+                                <rect key="frame" x="147" y="15" width="17" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="v9L-NE-UAR"/>
                                     <constraint firstAttribute="width" constant="17" id="zJq-Z6-VHw"/>
@@ -82,17 +90,27 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="kik-lf-Wlt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="2Wd-8e-eQF"/>
+                    <constraint firstItem="RXS-db-OZz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="1SB-yo-xjq"/>
                     <constraint firstItem="kik-lf-Wlt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6cj-4C-649"/>
+                    <constraint firstAttribute="trailing" secondItem="roc-du-u5M" secondAttribute="trailing" constant="10" id="6hx-MJ-c2y"/>
                     <constraint firstItem="aFD-A1-6yk" firstAttribute="leading" secondItem="kik-lf-Wlt" secondAttribute="trailing" constant="5" id="AIr-h4-8zZ"/>
                     <constraint firstAttribute="trailing" secondItem="aFD-A1-6yk" secondAttribute="trailing" constant="10" id="Nzw-Kd-rBk"/>
+                    <constraint firstAttribute="trailing" secondItem="RXS-db-OZz" secondAttribute="trailing" constant="10" id="RQq-ty-smA"/>
+                    <constraint firstAttribute="bottom" secondItem="RXS-db-OZz" secondAttribute="bottom" constant="10" id="Y30-DO-MKg"/>
                     <constraint firstItem="aFD-A1-6yk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Y4W-Mo-iUS"/>
+                    <constraint firstItem="roc-du-u5M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ZUP-23-il0"/>
+                    <constraint firstItem="kik-lf-Wlt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="buk-hQ-ivc"/>
+                    <constraint firstAttribute="bottom" secondItem="roc-du-u5M" secondAttribute="bottom" constant="10" id="iT9-hS-QW3"/>
+                    <constraint firstItem="roc-du-u5M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rcp-qn-CPq"/>
+                    <constraint firstItem="RXS-db-OZz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="tHZ-Vz-pwA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="authorLabel" destination="qOw-Fb-kOi" id="Yhs-lT-ObH"/>
+                <outlet property="mainBackgroundView" destination="RXS-db-OZz" id="W5e-8G-zpN"/>
                 <outlet property="priceLabel" destination="qeS-Pb-jYF" id="XIh-FB-Pce"/>
+                <outlet property="shadowLayerView" destination="roc-du-u5M" id="O0A-jn-JoT"/>
                 <outlet property="textbookImageView" destination="aFD-A1-6yk" id="c7E-hC-iNt"/>
                 <outlet property="titleLabel" destination="uyB-5n-vyQ" id="TDm-Z4-OH2"/>
             </connections>
