@@ -19,7 +19,7 @@ class CheckoutPageViewController: UIPageViewController, UIPageViewControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        totalCost = 0
         // Do any additional setup after loading the view.
         self.dataSource = self
         if let firstViewController = pageViewControllers.first {

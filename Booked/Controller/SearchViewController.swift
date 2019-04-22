@@ -25,8 +25,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         configureTableView()
         searchTableView.separatorStyle = .none
-
+        
+        setupTextFieldShadow()
         // Do any additional setup after loading the view.
+    }
+    
+    func setupTextFieldShadow()  {
+        searchTextField.layer.masksToBounds = false
+        searchTextField.layer.shadowRadius = 8.0
+        searchTextField.layer.shadowColor = UIColor.black.cgColor
+        searchTextField.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        searchTextField.layer.shadowOpacity = 0.5
     }
     
     func configureTableView() {
@@ -60,7 +69,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return searchArray.count
     }
     
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchTextField: TextField!
     
     func populatePosting(posting: Posting, snapshot: Dictionary<String, String>) -> Posting {
         
@@ -120,4 +129,22 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         retrievePostings()
     }
     
+}
+
+
+class TextField: UITextField {
+    
+    let padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+    
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
 }

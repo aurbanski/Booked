@@ -28,6 +28,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         retrievePostings()
         cartTableView.separatorStyle = .none
         myPageViewController = self.parent as! CheckoutPageViewController
+        totalCost = 0
     }
     
     func configureTableView() {
@@ -35,6 +36,10 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            totalCost = 0
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
         
         var price = cartArray[indexPath.row].price
