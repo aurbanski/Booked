@@ -55,15 +55,28 @@
                                 <color key="textColor" red="0.56078431370000004" green="0.83529411760000005" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rq9-jL-OJj">
+                                <rect key="frame" x="163" y="15" width="17" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="v9L-NE-UAR"/>
+                                    <constraint firstAttribute="width" constant="17" id="zJq-Z6-VHw"/>
+                                </constraints>
+                                <state key="normal" image="baseline-add_shopping_cart-40px"/>
+                                <connections>
+                                    <action selector="addToCartPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HHK-ma-Gza"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qeS-Pb-jYF" firstAttribute="leading" secondItem="qOw-Fb-kOi" secondAttribute="leading" id="Eo7-Lr-73n"/>
+                            <constraint firstAttribute="trailing" secondItem="rq9-jL-OJj" secondAttribute="trailing" constant="10" id="Fwo-pf-p4v"/>
                             <constraint firstItem="uyB-5n-vyQ" firstAttribute="leading" secondItem="kik-lf-Wlt" secondAttribute="leading" constant="10" id="LK0-sZ-qd4"/>
                             <constraint firstItem="qOw-Fb-kOi" firstAttribute="top" secondItem="uyB-5n-vyQ" secondAttribute="bottom" constant="5" id="Q7o-9J-7mc"/>
                             <constraint firstItem="qOw-Fb-kOi" firstAttribute="leading" secondItem="uyB-5n-vyQ" secondAttribute="leading" id="XCk-YH-tHt"/>
                             <constraint firstAttribute="height" constant="120" id="byb-Gl-srW"/>
                             <constraint firstItem="uyB-5n-vyQ" firstAttribute="top" secondItem="kik-lf-Wlt" secondAttribute="top" constant="10" id="jE4-Mr-gZb"/>
+                            <constraint firstItem="rq9-jL-OJj" firstAttribute="top" secondItem="kik-lf-Wlt" secondAttribute="top" constant="15" id="tsm-0A-QG9"/>
                             <constraint firstItem="qeS-Pb-jYF" firstAttribute="top" secondItem="qOw-Fb-kOi" secondAttribute="bottom" constant="5" id="yCT-wV-irk"/>
                         </constraints>
                     </view>
@@ -77,7 +90,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLabel" destination="qOw-Fb-kOi" id="Yhs-lT-ObH"/>
+                <outlet property="priceLabel" destination="qeS-Pb-jYF" id="XIh-FB-Pce"/>
+                <outlet property="textbookImageView" destination="aFD-A1-6yk" id="c7E-hC-iNt"/>
+                <outlet property="titleLabel" destination="uyB-5n-vyQ" id="TDm-Z4-OH2"/>
+            </connections>
             <point key="canvasLocation" x="53.600000000000001" y="48.575712143928037"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="baseline-add_shopping_cart-40px" width="27.5" height="28.5"/>
+    </resources>
 </document>
