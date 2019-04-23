@@ -9,14 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AbrilFatface-Regular.ttf">
-            <string>AbrilFatface-Regular</string>
-        </array>
-        <array key="Poppins-Regular.ttf">
-            <string>Poppins-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -26,50 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookLaunch" translatesAutoresizingMaskIntoConstraints="NO" id="QZI-rj-fZE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookedLaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="QZI-rj-fZE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6A-wb-qtC" userLabel="BottomView">
-                                <rect key="frame" x="0.0" y="343.5" width="375" height="323.5"/>
-                            </view>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg7-cV-v4m" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="323.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un2-AS-L4S">
-                                        <rect key="frame" x="84" y="121.5" width="207" height="81"/>
-                                        <fontDescription key="fontDescription" name="AbrilFatface-Regular" family="Abril Fatface" pointSize="60"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy and Sell Textbooks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU3-dT-eBE">
-                                        <rect key="frame" x="91" y="202.5" width="193" height="28"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="DU3-dT-eBE" firstAttribute="top" secondItem="un2-AS-L4S" secondAttribute="bottom" id="5cc-jM-2qV"/>
-                                    <constraint firstItem="DU3-dT-eBE" firstAttribute="centerX" secondItem="pg7-cV-v4m" secondAttribute="centerX" id="Mie-Xb-ARg"/>
-                                    <constraint firstItem="un2-AS-L4S" firstAttribute="centerY" secondItem="pg7-cV-v4m" secondAttribute="centerY" id="No7-if-Heb"/>
-                                    <constraint firstItem="un2-AS-L4S" firstAttribute="centerX" secondItem="pg7-cV-v4m" secondAttribute="centerX" id="qcs-Gj-XTM"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QZI-rj-fZE" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7c6-pP-1J3"/>
-                            <constraint firstItem="e6A-wb-qtC" firstAttribute="height" secondItem="pg7-cV-v4m" secondAttribute="height" id="BA1-t5-GgR"/>
-                            <constraint firstItem="pg7-cV-v4m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eep-Rf-4BQ"/>
                             <constraint firstItem="QZI-rj-fZE" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="Mdy-oX-tp7"/>
-                            <constraint firstItem="pg7-cV-v4m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ssn-Xg-vYz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e6A-wb-qtC" secondAttribute="bottom" id="Xtq-qm-d13"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e6A-wb-qtC" secondAttribute="trailing" id="aJ0-eu-Rvm"/>
                             <constraint firstItem="QZI-rj-fZE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eTA-XL-quN"/>
                             <constraint firstItem="QZI-rj-fZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fyc-Zq-1S5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pg7-cV-v4m" secondAttribute="trailing" id="p6F-0Y-VTu"/>
-                            <constraint firstItem="e6A-wb-qtC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rh2-js-CIG"/>
-                            <constraint firstItem="e6A-wb-qtC" firstAttribute="top" secondItem="pg7-cV-v4m" secondAttribute="bottom" id="ynl-1e-8Aj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -80,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BookLaunch" width="528.5" height="1004"/>
+        <image name="bookedLaunchScreen" width="529" height="1016.5"/>
     </resources>
 </document>

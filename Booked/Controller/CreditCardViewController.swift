@@ -27,7 +27,7 @@ class CreditCardViewController: UIViewController {
         // Do any additional setup after loading the view.
         myPageViewController = self.parent as! CheckoutPageViewController
         bookCostLabel.text = "$\((myPageViewController?.totalCost)!).00"
-        totalCostLabel.text = "$\(Float((myPageViewController?.totalCost)!) + 5.99)"
+        totalCostLabel.text = "$\(Float(Float((myPageViewController?.totalCost)!) + 5.99).rounded(toPlaces: 2))"
         
     }
     
@@ -71,4 +71,12 @@ class CreditCardViewController: UIViewController {
         
     }
     
+}
+
+extension Float {
+    /// Rounds the double to decimal places value
+    func rounded(toPlaces places:Int) -> Float {
+        let divisor = pow(10.0, Float(places))
+        return (self * divisor).rounded() / divisor
+    }
 }

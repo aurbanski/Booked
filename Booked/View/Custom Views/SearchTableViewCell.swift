@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 class SearchTableViewCell: UITableViewCell {
-
+    var posting: Posting?
+    
+    @IBOutlet weak var mainBackgroundView: UIView!
+    @IBOutlet weak var shadowLayerView: ShadowView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var textbookImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +28,13 @@ class SearchTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        mainBackgroundView.layer.cornerRadius = 20.0
+        textbookImageView.roundCorners(corners: [.topRight, .bottomRight], radius: 20.0)
     }
     
+    @IBAction func addToCartPressed(_ sender: Any) {
+        Database.database().reference().child("Carts").queryOrdered(byChild: "userID").queryEqual(toValue: Auth.auth().currentUser?.uid).observeSingleEvent(of: .childAdded) { (snapshot) in
+            snapshot.ref.child("Postings").updateChildValues([self.posting!.uid: true])
+        }
+    }
 }
