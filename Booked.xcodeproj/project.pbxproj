@@ -40,6 +40,7 @@
 		BAC6A11A2255415100AD65B6 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A1192255415100AD65B6 /* Posting.swift */; };
 		BAC6A11C2255437A00AD65B6 /* ViewPostingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6A11B2255437A00AD65B6 /* ViewPostingsViewController.swift */; };
 		BAC6E1AA226260E800637A8E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC6E1A9226260E700637A8E /* Toast.swift */; };
+		EDEC0695226EBCA700567D84 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0694226EBCA700567D84 /* ProfileViewController.swift */; };
 		F5783AE531E0BFF619FF66E0 /* Pods_Booked.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6379A83EE4D8B6584B74AEE4 /* Pods_Booked.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		BAC6A11B2255437A00AD65B6 /* ViewPostingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostingsViewController.swift; sourceTree = "<group>"; };
 		BAC6E1A9226260E700637A8E /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		BEBAF8CB65A5002242FE0991 /* Pods-Booked.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booked.debug.xcconfig"; path = "Target Support Files/Pods-Booked/Pods-Booked.debug.xcconfig"; sourceTree = "<group>"; };
+		EDEC0694226EBCA700567D84 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				BAC6154F226133FA00C5E339 /* ShippingViewController.swift */,
 				BA92A577226168B900252F53 /* CreditCardViewController.swift */,
 				BA1F14DD226D2CD6006D8BDF /* SearchViewController.swift */,
+				EDEC0694226EBCA700567D84 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				BA69AA292257C075002F675B /* CartViewController.swift in Sources */,
 				BA101C0F225151F1000D94CB /* AppDelegate.swift in Sources */,
 				BA23642A226254460016A236 /* CreditCard.swift in Sources */,
+				EDEC0695226EBCA700567D84 /* ProfileViewController.swift in Sources */,
 				BAC61550226133FA00C5E339 /* ShippingViewController.swift in Sources */,
 				BA92A578226168B900252F53 /* CreditCardViewController.swift in Sources */,
 			);
