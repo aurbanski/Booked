@@ -5,6 +5,7 @@
 //  Created by Alex Urbanski on 4/12/19.
 //  Copyright © 2019 Alex Urbanski. All rights reserved.
 //
+// Based on UIPageViewController Tutorial https://github.com/awseeley/Swift-UI-Page-Control-Tutorial
 
 import UIKit
 

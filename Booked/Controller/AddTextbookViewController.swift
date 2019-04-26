@@ -30,6 +30,7 @@ class AddTextbookViewController: UIViewController, UIImagePickerControllerDelega
         submitButton.isEnabled = option
     }
     
+// Reference for using the image picker https://www.youtube.com/watch?v=b1vrjt7Nvb0
     @IBAction func imageButtonPressed(_ sender: Any) {
         imagePicker.delegate = self
         imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary

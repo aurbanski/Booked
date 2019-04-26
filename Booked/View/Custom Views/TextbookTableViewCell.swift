@@ -18,6 +18,7 @@ class TextbookTableViewCell: UICollectionViewCell {
         }
     }
 
+// Shadow code for collection view cell https://stackoverflow.com/questions/37645408/uitableviewcell-rounded-corners-and-shadow
     private func setupShadow() {
         self.layer.cornerRadius = 15
         self.layer.shadowOffset = CGSize(width: 0, height: 0)

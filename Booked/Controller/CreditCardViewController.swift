@@ -73,8 +73,9 @@ class CreditCardViewController: UIViewController {
     
 }
 
+// Rounding extension for float from https://stackoverflow.com/questions/27338573/rounding-a-double-value-to-x-number-of-decimal-places-in-swift
 extension Float {
-    /// Rounds the double to decimal places value
+    /// Rounds the float to decimal places value
     func rounded(toPlaces places:Int) -> Float {
         let divisor = pow(10.0, Float(places))
         return (self * divisor).rounded() / divisor

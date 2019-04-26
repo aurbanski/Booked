@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Code for setting up shadow view https://stackoverflow.com/questions/37645408/uitableviewcell-rounded-corners-and-shadow
 class ShadowView: UIView {
     override var bounds: CGRect {
         didSet {

@@ -30,6 +30,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Do any additional setup after loading the view.
     }
     
+// Code for setting up shadow on textfield from https://stackoverflow.com/questions/35333336/ios-rounded-uitextfield-with-shadow
     func setupTextFieldShadow()  {
         searchTextField.layer.masksToBounds = false
         searchTextField.layer.shadowRadius = 8.0
@@ -131,6 +132,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
 }
 
+// New class for changing textfield insets https://stackoverflow.com/questions/25367502/create-space-at-the-beginning-of-a-uitextfield
 
 class TextField: UITextField {
     
